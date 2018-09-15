@@ -1,7 +1,7 @@
 - debug:
     msg: "{{ db_dict }}"
 - debug:
-    msg: "{{ db_dict.rails }}"
+    msg: "{{ db_dict|dictsort }}"
 
 - debug:
     msg: "{{ item.rails }} is item.rails"
