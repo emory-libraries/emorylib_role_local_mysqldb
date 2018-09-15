@@ -2,7 +2,7 @@
   mysql_db:
     name: "{{ item.value.name }}"
     state: "{{ db_state }}"
-  loop: "{{ db_dict|dictsort }}"
+  loop: "{{ db_dict|list|dictsort }}"
 
 - name: Create MySQL users and grant priv
   mysql_user:
@@ -10,4 +10,4 @@
     password: "{{ item.pass }}"
     priv: '{{ item.name }}.*:ALL'
     state: "{{ db_user_state }}"
-  loop: "{{ db_dict|dictsort }}"
+  loop: "{{ db_dict|list|dictsort }}"
