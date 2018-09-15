@@ -10,4 +10,4 @@
     password: "{{ item.pass }}"
     priv: '{{ item.name }}.*:ALL'
     state: "{{ db_user_state }}"
-  loop: "{{ db_dict|dict2items }}"
+  loop: "{{ db_dict|dictsort }}"
