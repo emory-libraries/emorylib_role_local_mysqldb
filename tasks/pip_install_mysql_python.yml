@@ -1,0 +1,2 @@
+- name: Install MySQL-Python via Pip
+  pip: MySQL-python
