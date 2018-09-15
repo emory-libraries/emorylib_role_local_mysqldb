@@ -3,5 +3,5 @@
     db_dict:
       rails:
         name: "{{ rails_db_name }}"
-	user: "{{ rails_db_user }}"
-	pass: "{{ rails_db_pass }}"
+        user: "{{ rails_db_user }}"
+        pass: "{{ rails_db_pass }}"
