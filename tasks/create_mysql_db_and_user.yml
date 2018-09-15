@@ -4,8 +4,8 @@
     msg: "{{ db_dict.rails }}"
 
 - debug:
-    msg: "{{ item.name }} is db_name, {{ item.user }} is the username"
-  loop: "{{ db_dict.rails|dictsort }}"
+    msg: "{{ item.rails }} is item.rails"
+  loop: "{{ db_dict|dictsort }}"
 
 - name: Create MySQL databases
   mysql_db:
