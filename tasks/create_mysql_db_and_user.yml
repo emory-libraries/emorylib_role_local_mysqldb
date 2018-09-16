@@ -2,7 +2,7 @@
   mysql_db:
     name: "{{ item.name }}"
     state: "{{ db_state }}"
-  loop: "{{ query('dict', 'db_dict') }}"
+  loop: "{{ query('dict', db_dict) }}"
  # with_subelements: "{{ db_dict }}"
 
 
