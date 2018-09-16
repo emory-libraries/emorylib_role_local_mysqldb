@@ -1,8 +1,8 @@
 - name: Create MySQL databases
   mysql_db:
-    name: "{{ item.0.name }}"
+    name: "{{ item }}"
     state: "{{ db_state }}"
-  loop: "{{ db_dict|subelements}}"
+  loop: "{{ query('db_dict', 'name') }}"
  # with_subelements: "{{ db_dict }}"
 
 
