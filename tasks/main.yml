@@ -1,12 +1,6 @@
 ---
 # tasks file for emorylib_role_local_mysqldb
 
-- name: Print phone records
-  debug:
-    msg: "User {{ item.key }} is {{ item.value.name }} ({{ item.value.telephone }})"
-  with_dict: "{{ users }}"
-- meta: end_play
-
 - include_tasks: install_server.yml
 - include_tasks: pip_install_mysql_python.yml
 - include_tasks: load_project_env.yml
