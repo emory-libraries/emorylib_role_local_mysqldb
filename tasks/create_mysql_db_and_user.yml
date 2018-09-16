@@ -1,22 +1,13 @@
-- debug:
-    msg: "{{ db_dict }}"
-- debug:
-    msg: "{{ db_dict|dictsort|list }}"
-
-- debug:
-    msg: "{{ item.rails }} is item.rails"
-  loop: "{{ db_dict|dictsort|list }}"
-
 - name: Create MySQL databases
   mysql_db:
-    name: "{{ item.key.name }}"
+    name: "{{ item.name }}"
     state: "{{ db_state }}"
-  loop: "{{ db_dict|list|dictsort }}"
+  loop: "{{ db_dict|subelements}}"
 
 - name: Create MySQL users and grant priv
   mysql_user:
-    name: "{{ item.key.user }}"
-    password: "{{ item.key.pass }}"
-    priv: '{{ item.key.name }}.*:ALL'
+    name: "{{ item.user }}"
+    password: "{{ item.pass }}"
+    priv: '{{ item.name }}.*:ALL'
     state: "{{ db_user_state }}"
-  loop: "{{ db_dict|dictsort }}"
+  loop: "{{ db_dict|subelements }}"
