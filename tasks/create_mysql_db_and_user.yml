@@ -2,7 +2,7 @@
   mysql_db:
     name: "{{ item.name }}"
     state: "{{ db_state }}"
-  loop: "{{ db_dict|dictsort|subelements}}"
+  loop: "{{ db_dict|dictsort|subelements('name')}}"
  # with_subelements: "{{ db_dict }}"
 
 
