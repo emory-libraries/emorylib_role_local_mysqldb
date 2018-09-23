@@ -1,11 +1,3 @@
-#- name: Create database dictionary
-#  set_fact:
-#    db_dict: "{{ db_dict|combine({item.key: item.value.name, item.value.user, item.value.pass}) }}"
-#  when: item.value is defined
-#  loop:
-#    - { key: rails, name: "{{ rails_db_name }}", user: "{{ rails_db_user }}", pass: "{{ rails_db_pass }}" }
-#    - { key: fedora, name: "{{ fedora_db_name }}", user: "{{ fedora_db_user }}", pass: "{{ fedora_db_password }}" }
-
 - name: Set rails db dictionary
   set_fact:
     db_dict:
