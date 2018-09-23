@@ -7,4 +7,4 @@ rails_db_pass: ""
 
 fedora_db_name: ""
 fedora_db_user: ""
-fedora_db_pass: ""
+fedora_db_password: ""
