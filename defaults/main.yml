@@ -1,10 +1,10 @@
 ---
 # defaults file for emorylib_role_local_mysqldb
 # Needed for role logic
-rails_db_name: ""
-rails_db_user: ""
-rails_db_pass: ""
+rails_db_name: "placeholderdb"
+rails_db_user: "placeholderuser"
+rails_db_pass: "placepass"
 
-fedora_db_name: ""
-fedora_db_user: ""
-fedora_db_password: ""
+fedora_db_name: "placeholderdb"
+fedora_db_user: "placeholderuser"
+fedora_db_password: "placepass" 
