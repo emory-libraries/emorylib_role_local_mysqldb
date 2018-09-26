@@ -2,7 +2,7 @@
   set_fact:
     db_state: absent
     db_user_state: absent
-  tags: [delete-db, delete-all, never]
+  tags: [ delete-db, delete-all, never ]
 
 - name: Create MySQL databases
   mysql_db:
