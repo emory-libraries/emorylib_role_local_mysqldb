@@ -2,5 +2,4 @@
   include_role:
     name: dce_role_project_env
   vars:
-    project_env_path:
-      use_absolute_paths: yes
+    use_absolute_paths: yes
